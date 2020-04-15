@@ -12,6 +12,27 @@ console.log("I have told LIRI too " + action);
 
 //bandsintown api call "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp"
 
+queryURL = 'https://rest.bandsintown.com/artists/icp/events?app_id=codingbootcamp'
+
+axios.get(queryURL)
+    .then(function (response) {
+        // handle success
+        console.log(response.data[0]);
+        // Venue Name
+        console.log(response.data[0].venue.name);
+        //Venue Location
+        console.log(response.data[0].venue.location);
+        //Date of Event
+        console.log(response.data[0].datetime).moment().format("MM/DD/YYYY");
+    })
+    .catch(function (error) {
+        // handle error
+        console.log(error);
+    })
+    .finally(function () {
+        // always executed
+    });
+
 // var Spotify = require('node-spotify-api');
 
 // var spotify = new Spotify(keys.spotify);
@@ -33,21 +54,12 @@ console.log("I have told LIRI too " + action);
 //     //preveiw link
 //     console.log("Preview: " + data.tracks.items[0].preview_url);
 // });
-// var artist = "icp"
 
-// axios.get('https://rest.bandsintown.com/artists/' + artist + '/events?app_id=codingbootcamp')
-//     .then(function (response) {
-//         // handle success
-//         console.log(response.data[0]);
-//         console.log(response.data[0].)
-//     })
-//     .catch(function (error) {
-//         // handle error
-//         console.log(error);
-//     })
-//     .finally(function () {
-//         // always executed
-//     });
+
+
+// * Name of the venue
+// * Venue location
+// * Date of the Event (use moment to format this as "MM/DD/YYYY")
 
 // * Title of the movie.
 // * Year the movie came out.
