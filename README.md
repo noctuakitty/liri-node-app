@@ -5,3 +5,11 @@ LIRI will be a command line node app that takes in parameters and gives you back
 
 My challenges were abundunt during this project. 
 From not understanding a switch at first to inquire. 
+
+
+![screenshot](/media/liri-1.png)
+![screenshot](/media/liri-2.png)
+![screenshot](/media/liri-3.png)
+![screenshot](/media/liri-4.png)
+![screenshot](/media/liri-5.png)
+![screenshot](/media/liri-6.png)

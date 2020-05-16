@@ -196,16 +196,19 @@ function moviethis() {
     });
 }
 
-//function dowhatitsays() {
-// inquirer.prompt([
-//     {
-//         type:
-//         message:
-//         name:
-//     }
-// ])
-//}
-// I don't entirely understand what it wants me to do here other than write to a txt file. I'm still unsure how to do this on my own. 
+var doWhatItSays = function() {
+    fs.readFile("random.txt", "utf8", function(error, data) {
+      console.log(data);
+  
+      var dataArr = data.split(",");
+  
+      if (dataArr.length === 2) {
+        pick(dataArr[0], dataArr[1]);
+      } else if (dataArr.length === 1) {
+        pick(dataArr[0]);
+      }
+    });
+  };
 
 
 menu();
